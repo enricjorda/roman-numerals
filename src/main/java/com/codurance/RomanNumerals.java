@@ -4,7 +4,8 @@ public class RomanNumerals {
 
     private static String roman;
     private enum Arabic2Roman{
-        I(1);
+        I(1),
+        V(5);
 
         int arabic;
         Arabic2Roman(int i){
@@ -27,8 +28,9 @@ public class RomanNumerals {
         decimal = romanGenerator(decimal, 10, "X");
         decimal = romanGenerator(decimal, 5, "V");
         decimal = romanGenerator(decimal, 4, "IV");
-        romanGenerator(decimal, Arabic2Roman.I.getArabic(), "I");
 
+        romanGenerator(decimal, Arabic2Roman.V.getArabic(), Arabic2Roman.V.toString());
+        romanGenerator(decimal, Arabic2Roman.I.getArabic(), Arabic2Roman.I.toString());
         return roman;
     }
 
