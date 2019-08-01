@@ -76,4 +76,9 @@ public class RomanNumeralsShould {
     public void convert_4_to_IV() {
         assertEquals("IV", RomanNumerals.convert(4));
     }
+
+    @Test
+    public void convert_40_to_XL() {
+        assertEquals("XL", RomanNumerals.convert(40));
+    }
 }
