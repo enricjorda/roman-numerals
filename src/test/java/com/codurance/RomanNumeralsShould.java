@@ -23,4 +23,10 @@ public class RomanNumeralsShould {
 
         assertEquals("III", RomanNumerals.convert(3));
     }
+
+    @Test
+    public void convert_10_to_X() {
+
+        assertEquals("X", RomanNumerals.convert(10));
+    }
 }
