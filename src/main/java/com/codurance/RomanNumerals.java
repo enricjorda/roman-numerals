@@ -3,6 +3,18 @@ package com.codurance;
 public class RomanNumerals {
 
     private static String roman;
+    private enum Arabic2Roman{
+        I(1);
+
+        int arabic;
+        Arabic2Roman(int i){
+            this.arabic = i;
+        }
+
+        public int getArabic() {
+            return arabic;
+        }
+    }
 
     public static String convert(int decimal) {
         roman = "";
@@ -15,7 +27,7 @@ public class RomanNumerals {
         decimal = romanGenerator(decimal, 10, "X");
         decimal = romanGenerator(decimal, 5, "V");
         decimal = romanGenerator(decimal, 4, "IV");
-        romanGenerator(decimal, 1, "I");
+        romanGenerator(decimal, Arabic2Roman.I.getArabic(), "I");
 
         return roman;
     }
