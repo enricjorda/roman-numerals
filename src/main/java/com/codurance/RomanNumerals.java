@@ -22,12 +22,16 @@ public class RomanNumerals {
             roman += "X";
         }
 
-        while(decimal > 0) {
-            decimal -= 1;
-            roman += "I";
-        }
+        romanGenerator(decimal, 1, "I");
 
         return roman;
+    }
+
+    private static void romanGenerator(int decimal, int valor, String character) {
+        while(decimal >= valor) {
+            decimal -= valor;
+            roman += character;
+        }
     }
 
 }
