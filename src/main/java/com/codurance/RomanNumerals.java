@@ -8,6 +8,7 @@ public class RomanNumerals {
         roman = "";
 
         if(decimal == 4) return "IV";
+        if(decimal == 40) return "XL";
         decimal = romanGenerator(decimal, 1000, "M");
         decimal = romanGenerator(decimal, 100, "C");
         decimal = romanGenerator(decimal, 10, "X");
