@@ -59,4 +59,10 @@ public class RomanNumeralsShould {
 
         assertEquals("CC", RomanNumerals.convert(200));
     }
+
+    @Test
+    public void convert_300_to_CCC() {
+
+        assertEquals("CCC", RomanNumerals.convert(300));
+    }
 }
