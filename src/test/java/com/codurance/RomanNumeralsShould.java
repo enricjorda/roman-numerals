@@ -91,4 +91,9 @@ public class RomanNumeralsShould {
     public void convert_5_to_V() {
         assertEquals("V", RomanNumerals.convert(5));
     }
+
+    @Test
+    public void convert_50_to_L() {
+        assertEquals("L", RomanNumerals.convert(50));
+    }
 }
