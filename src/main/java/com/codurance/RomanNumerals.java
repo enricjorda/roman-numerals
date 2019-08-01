@@ -2,8 +2,10 @@ package com.codurance;
 
 public class RomanNumerals {
 
+    private static String roman;
+
     public static String convert(int decimal) {
-        String roman = "";
+         roman = "";
 
         while(decimal >= 1000) {
             decimal -= 1000;
