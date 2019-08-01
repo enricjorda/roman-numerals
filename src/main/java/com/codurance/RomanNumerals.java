@@ -29,8 +29,10 @@ public class RomanNumerals {
         decimal = romanGenerator(decimal, 5, "V");
         decimal = romanGenerator(decimal, 4, "IV");
 
-        romanGenerator(decimal, Arabic2Roman.V.getArabic(), Arabic2Roman.V.toString());
-        romanGenerator(decimal, Arabic2Roman.I.getArabic(), Arabic2Roman.I.toString());
+        for (Arabic2Roman number : Arabic2Roman.values()) {
+            romanGenerator(decimal, number.getArabic(), number.toString());
+        }
+
         return roman;
     }
 
