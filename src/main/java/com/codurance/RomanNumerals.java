@@ -7,7 +7,6 @@ public class RomanNumerals {
     public static String convert(int decimal) {
         roman = "";
 
-        if(decimal == 5) return "V";
         if(decimal == 4) return "IV";
         if(decimal == 40) return "XL";
         if(decimal == 400) return "CD";
@@ -15,6 +14,7 @@ public class RomanNumerals {
         decimal = romanGenerator(decimal, 1000, "M");
         decimal = romanGenerator(decimal, 100, "C");
         decimal = romanGenerator(decimal, 10, "X");
+        decimal = romanGenerator(decimal, 5, "V");
         romanGenerator(decimal, 1, "I");
 
         return roman;
