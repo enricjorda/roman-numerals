@@ -29,4 +29,10 @@ public class RomanNumeralsShould {
 
         assertEquals("X", RomanNumerals.convert(10));
     }
+
+    @Test
+    public void convert_100_to_C() {
+
+        assertEquals("C", RomanNumerals.convert(100));
+    }
 }
