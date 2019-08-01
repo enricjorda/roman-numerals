@@ -41,4 +41,10 @@ public class RomanNumeralsShould {
 
         assertEquals("M", RomanNumerals.convert(1000));
     }
+
+    @Test
+    public void convert_20_to_XX() {
+
+        assertEquals("XX", RomanNumerals.convert(20));
+    }
 }
