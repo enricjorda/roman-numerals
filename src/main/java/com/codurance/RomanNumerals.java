@@ -7,6 +7,7 @@ public class RomanNumerals {
     public static String convert(int decimal) {
         roman = "";
 
+        if(decimal == 5) return "V";
         if(decimal == 4) return "IV";
         if(decimal == 40) return "XL";
         if(decimal == 400) return "CD";
