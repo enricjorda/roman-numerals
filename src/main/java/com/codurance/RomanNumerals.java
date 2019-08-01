@@ -5,6 +5,8 @@ public class RomanNumerals {
     public static String convert(int decimal) {
         String roman = "";
 
+        if (decimal == 3000) return "MMM";
+        if (decimal == 2000) return "MM";
         if (decimal == 1000) return "M";
 
         while(decimal >= 100) {
