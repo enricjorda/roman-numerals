@@ -3,6 +3,25 @@ package com.codurance;
 public class RomanNumerals {
 
     private static String roman;
+
+    public static String convert(int decimal) {
+        roman = "";
+
+        for (Arabic2Roman number : Arabic2Roman.values()) {
+            decimal = romanGenerator(decimal, number.getArabic(), number.toString());
+        }
+        return roman;
+    }
+
+    private static int romanGenerator(int decimal, int arabicValue, String romanCharacter) {
+        while(decimal >= arabicValue) {
+            decimal -= arabicValue;
+            roman += romanCharacter;
+        }
+
+        return decimal;
+    }
+
     private enum Arabic2Roman{
         M(1000),
         D(500),
@@ -24,24 +43,6 @@ public class RomanNumerals {
             return arabic;
         }
     }
-
-    public static String convert(int decimal) {
-        roman = "";
-
-        for (Arabic2Roman number : Arabic2Roman.values()) {
-            decimal = romanGenerator(decimal, number.getArabic(), number.toString());
-        }
-
-        return roman;
-    }
-
-    private static int romanGenerator(int decimal, int arabicValue, String romanCharacter) {
-        while(decimal >= arabicValue) {
-            decimal -= arabicValue;
-            roman += romanCharacter;
-        }
-
-        return decimal;
-    }
-
 }
+
+
