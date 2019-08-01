@@ -65,4 +65,11 @@ public class RomanNumeralsShould {
 
         assertEquals("CCC", RomanNumerals.convert(300));
     }
+
+    @Test
+    public void convert_3000_to_MMM() {
+
+        assertEquals("MMM", RomanNumerals.convert(3000));
+    }
+
 }
