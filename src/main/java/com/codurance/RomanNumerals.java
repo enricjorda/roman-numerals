@@ -3,9 +3,10 @@ package com.codurance;
 public class RomanNumerals {
 
     public static String convert(int decimal) {
-
-        if(decimal == 3) return "III";
-        if(decimal == 2) return "II";
-        return "I";
+        String roman = "";
+        for(int i = 0; i < decimal; i++){
+            roman += "I";
+        }
+        return roman;
     }
 }
