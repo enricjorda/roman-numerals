@@ -81,4 +81,9 @@ public class RomanNumeralsShould {
     public void convert_40_to_XL() {
         assertEquals("XL", RomanNumerals.convert(40));
     }
+
+    @Test
+    public void convert_400_to_CD() {
+        assertEquals("CD", RomanNumerals.convert(400));
+    }
 }
