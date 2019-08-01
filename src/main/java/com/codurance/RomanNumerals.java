@@ -4,17 +4,20 @@ public class RomanNumerals {
 
     public static String convert(int decimal) {
         String roman = "";
+
         if (decimal == 1000) return "M";
         if (decimal == 100) return "C";
 
+        while(decimal >= 10) {
+            decimal -= 10;
+            roman += "X";
+        }
 
-        if (decimal == 10) return "X";
-        if (decimal == 20) return "XX";
-        if (decimal == 30) return "XXX";
-
-        for(int i = 0; i < decimal; i++){
+        while(decimal > 0) {
+            decimal -= 1;
             roman += "I";
         }
+
         return roman;
     }
 }
