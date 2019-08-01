@@ -6,8 +6,11 @@ public class RomanNumerals {
         String roman = "";
 
         if (decimal == 1000) return "M";
-        if (decimal == 200) return "CC";
-        if (decimal == 100) return "C";
+
+        while(decimal >= 100) {
+            decimal -= 100;
+            roman += "C";
+        }
 
         while(decimal >= 10) {
             decimal -= 10;
@@ -21,4 +24,5 @@ public class RomanNumerals {
 
         return roman;
     }
+
 }
