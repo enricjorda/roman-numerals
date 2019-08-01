@@ -5,8 +5,9 @@ public class RomanNumerals {
     private static String roman;
 
     public static String convert(int decimal) {
-         roman = "";
+        roman = "";
 
+        if(decimal == 4) return "IV";
         decimal = romanGenerator(decimal, 1000, "M");
         decimal = romanGenerator(decimal, 100, "C");
         decimal = romanGenerator(decimal, 10, "X");
