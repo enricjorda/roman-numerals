@@ -35,4 +35,10 @@ public class RomanNumeralsShould {
 
         assertEquals("C", RomanNumerals.convert(100));
     }
+
+    @Test
+    public void convert_1000_to_M() {
+
+        assertEquals("M", RomanNumerals.convert(1000));
+    }
 }
