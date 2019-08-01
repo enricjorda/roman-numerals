@@ -16,10 +16,10 @@ public class RomanNumerals {
         return roman;
     }
 
-    private static int  romanGenerator(int decimal, int valor, String character) {
-        while(decimal >= valor) {
-            decimal -= valor;
-            roman += character;
+    private static int romanGenerator(int decimal, int arabicValue, String romanCharacter) {
+        while(decimal >= arabicValue) {
+            decimal -= arabicValue;
+            roman += romanCharacter;
         }
 
         return decimal;
